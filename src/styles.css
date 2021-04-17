@@ -1,0 +1,271 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+.button {
+  background-color: rgb(113, 167, 189); /* Green */
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: auto;
+  cursor: pointer;
+}
+.button.disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+/*EventListGrid Component*/
+
+.eventsearch {
+  border-radius: 10px;
+  border: 1px solid #eee;
+  transition: 0.3s border-color;
+  width: 250px;
+  height: 30px;
+}
+.posts {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.centernotify {
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 40%;
+  text-align: center;
+}
+.hide {
+  display: none !important;
+}
+.posts .post {
+  background: white;
+  margin: 10px;
+  height: 200px;
+  width: calc((100% / 4) - 50px);
+  padding: 10px 10px 36px 10px;
+  border: 1px solid black;
+}
+
+.eventList {
+  width: 100%;
+}
+.post {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.post:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+/*EventcardComponent*/
+
+.eventCardComp .eventProfilepic {
+  width: 80px;
+  height: 80px;
+  float: left;
+  border: 2px solid black;
+}
+.eventCardComp .cardDetails {
+  float: right;
+  border: 2px solid black;
+  padding: 6px;
+  text-align: left;
+}
+.eventCardComp .eventcardheading {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  width: auto;
+  min-width: 100px;
+}
+
+/*Booking event page*/
+.EventbookingGrid {
+  border: 1px solid black;
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+.EventbookingGrid .leftformsection .eventProfilepic {
+  border: 1px solid black;
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+.rightformsection {
+  width: auto;
+  max-width: 350px;
+  border: 1px solid black;
+  float: right;
+  padding: 25px;
+}
+.clearAll {
+  clear: both;
+}
+.form-group {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+}
+.form-groupbtn {
+  display: inline-block;
+  text-align: left;
+  margin-top: 10px;
+}
+.form-group label {
+  padding-right: 10px;
+  width: 100px;
+  display: inline-block;
+}
+.form-group input {
+  padding-right: 10px;
+  float: right;
+}
+.form-groupbtn .button {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+small.form-text {
+  color: red;
+  display: block;
+  margin-top: 10px;
+}
+.form-group .seatselector {
+  width: auto;
+  min-width: 170px;
+  float: right;
+}
+.successmsg {
+  display: inline-block;
+  text-align: center;
+  font-size: 17px;
+  font-style: italic;
+  color: green;
+}
+@media (max-width: 399px) {
+  .posts .post {
+    width: 100%;
+    padding: 20px;
+  }
+  .eventCardComp .eventcardheading {
+    margin: 0 auto 17px auto;
+  }
+  .eventCardComp .eventProfilepic {
+    width: 70px;
+    height: 138px;
+  }
+  .eventCardComp .cardDetails {
+    padding: 7px;
+  }
+  .EventbookingGrid .leftformsection .eventProfilepic {
+    width: 185px;
+    height: 153px;
+    float: none;
+  }
+  .form-group label {
+    text-align: left;
+    display: inline-block;
+    width: 100%;
+    min-width: 200px;
+  }
+
+  .form-group input {
+    display: block;
+    width: 100%;
+    max-width: 190px;
+    margin: 0;
+    float: left;
+  }
+  .form-group .seatselector {
+    width: 100%;
+    min-width: 215px;
+  }
+  .form-group small {
+    display: block;
+  }
+}
+@media (min-width: 400px) and (max-width: 594px) {
+  .posts .post {
+    width: 100%;
+    padding: 35px;
+  }
+  .eventCardComp .eventcardheading {
+    margin: 0 auto 17px auto;
+  }
+  .eventCardComp .cardDetails {
+    padding: 15px;
+  }
+  .eventCardComp .eventProfilepic {
+    width: 100px;
+    height: 155px;
+  }
+  .form-group input {
+    display: block;
+  }
+
+  .EventbookingGrid .leftformsection .eventProfilepic {
+    width: 185px;
+    height: 153px;
+    float: none;
+  }
+}
+@media (min-width: 595px) and (max-width: 877px) {
+  .posts .post {
+    width: calc((100% / 2) - 50px);
+  }
+  .eventCardComp .eventProfilepic {
+    width: 80px;
+    height: 138px;
+  }
+  .EventbookingGrid .leftformsection .eventProfilepic {
+    width: 135px;
+    height: 233px;
+    float: left;
+  }
+}
+@media (min-width: 878px) and (max-width: 1280px) {
+  .posts .post {
+    width: calc((100% / 3) - 50px);
+  }
+  .EventbookingGrid .leftformsection .eventProfilepic {
+    width: 202px;
+    height: 237px;
+    float: left;
+  }
+  .eventCardComp .eventProfilepic {
+    width: 65px;
+    height: 139px;
+  }
+}
+@media (min-width: 1281px) {
+  .posts .post {
+    width: calc((100% / 4) - 50px);
+  }
+  .posts {
+    padding: 0 25px;
+    margin: auto;
+  }
+  .EventbookingGrid .leftformsection .eventProfilepic {
+    width: 202px;
+    height: 237px;
+  }
+  .eventCardComp .eventProfilepic {
+    width: 82px;
+    height: 139px;
+  }
+}
